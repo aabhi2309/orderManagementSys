@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="content">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" formControlName="email" placeholder="enter the email">
+        <span  *ngIf="(loginForm.get('email').touched ) && loginForm.get('email').invalid">  
+          <span style="color: red;" *ngIf="loginForm.get('email').hasError('required')" >
+            <br>
+            Please Enter the  Email
+          </span>
+          <span style="color: red;" *ngIf="loginForm.get('email').hasError('pattern')" >
+            Please Enter the valid Email
+          </span>
+        </span>
+      </div>
+      <div class="form-group" >
+        <label for="password">Password</label>
+        <input type="password" class="form-control" formControlName="password" placeholder="enter the password" >
+        <span  *ngIf="(loginForm.get('password').touched ) && loginForm.get('password').invalid">  
+          <span style="color: red;" *ngIf="loginForm.get('password').hasError('required')" >
+            <br>
+            Please Enter the  password
+          </span>
+          <span style="color: red;" *ngIf="loginForm.get('password').hasError('minlength')" >
+            Passward entered less than 6 character
+          </span>
+        </span>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Remember me</label>
+        </div>
+      </div>    
+        <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid" >Submit</button>   
+    </form>
+    
+  </div>
+  
+</div> 
+
+

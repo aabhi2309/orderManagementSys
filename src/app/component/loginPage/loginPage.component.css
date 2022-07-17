@@ -1,0 +1,32 @@
+
+.container{display: flex;
+    background-color: #56baed;
+    display: flex;
+    justify-content: center;
+   
+    height: 100vh;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    width: 50vw;
+    height: 50vh;
+    margin-top: 50px;
+    background-color: white;
+
+}
+
+form{
+    padding: 10px;
+}
+form>div>label{
+    font-size: xx-large;
+}
+.form-check{
+    margin-top: 10px;
+}
+
+button{
+    width: 34vw;
+    height: 5vh;
+}

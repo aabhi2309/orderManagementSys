@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  background-color: #56baed;
+  display: flex;
+  justify-content: center;
+
+  height: 100vh;
+}
+.content {
+  width: 60vw;
+  margin: 40px auto;
+  background-color: white;
+}
+.content>h1{
+    margin-top: 30px;
+    text-align: center;
+    font-weight: bolder;
+}
+form {
+  padding: 30px;
+}
+form > div > label {
+  font-size: xx-large;
+}
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 50px;
+
+}
+.form-control {
+  margin-left: 10px;
+}
+.formButton{
+    text-align: center;
+    margin-top: 30px;
+}
+button {    
+  width: 34vw;
+  height: 5vh;
+}

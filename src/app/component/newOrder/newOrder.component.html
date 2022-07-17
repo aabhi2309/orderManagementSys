@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="content">
+    <h1> Fill the Details of Order</h1>
+    <form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="number">Order Number</label>
+        <input type="number" class="form-control" formControlName="orderNumber" placeholder="enter the email">
+        <span  *ngIf="(orderForm.get('orderNumber').touched ) && orderForm.get('orderNumber').invalid">  
+          <span style="color: red;" *ngIf="orderForm.get('orderNumber').hasError('required')" >
+            <br>
+            Please Enter the  Order Number
+          </span>          
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="orderDueDate">Order Due Date</label>
+        <input type="date" class="form-control" formControlName="orderDueDate" placeholder="enter the Order Due Date">
+        <span  *ngIf="(orderForm.get('orderDueDate').touched ) && orderForm.get('orderDueDate').invalid">  
+          <span style="color: red;" *ngIf="orderForm.get('orderDueDate').hasError('required')" >
+            <br>
+            Please Enter Order Due Date
+          </span>          
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="customerName">Customer Name</label>
+        <input type="text" class="form-control" formControlName="customerName" placeholder="enter the Customer Name">
+        <span  *ngIf="(orderForm.get('customerName').touched ) && orderForm.get('customerName').invalid">  
+          <span style="color: red;" *ngIf="orderForm.get('customerName').hasError('required')" >
+            <br>
+            Please Enter the  Customer Name
+          </span>          
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="customerAddress">Customer Address</label>
+        <input type="text" class="form-control" formControlName="customerAddress" placeholder="enter the Customer Address">
+        <span  *ngIf="(orderForm.get('customerAddress').touched ) && orderForm.get('customerAddress').invalid">  
+          <span style="color: red;" *ngIf="orderForm.get('customerAddress').hasError('required')" >
+            <br>
+            Please Enter the  Customer Address
+          </span>          
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="customerPhone">Customer Phone number</label>
+        <input type="number" class="form-control" formControlName="customerPhone" placeholder="enter the Customer Phone number">
+        <span  *ngIf="(orderForm.get('customerPhone').touched ) && orderForm.get('customerPhone').invalid">  
+          <span style="color: red;" *ngIf="orderForm.get('customerPhone').hasError('required')" >
+            <br>
+            Please Enter the Customer Phone number
+          </span>          
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="orderTotal">Total Order Cost</label>
+        <input type="number" class="form-control" formControlName="orderTotal" placeholder="enter the Cost">
+        <span  *ngIf="(orderForm.get('orderTotal').touched ) && orderForm.get('orderTotal').invalid">  
+          <span style="color: red;" *ngIf="orderForm.get('orderTotal').hasError('required')" >
+            <br>
+            Please Enter the  Cost
+          </span>          
+        </span>
+      </div> 
+      <div class="formButton">
+        <button type="submit" [disabled]="!orderForm.valid" >Submit</button> 
+      </div>
+          
+    </form>
+    
+  </div>
+  
+</div> 
+
+
